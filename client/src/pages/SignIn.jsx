@@ -8,10 +8,13 @@ import {
   signInFailure,
 } from "../redux/user/userSlice";
 import OAuth from "../components/OAuth";
+import evLogoDark from "../assets/evLogoDark.jpeg";
+import evLogoLight from "../assets/evLogoLight.jpeg";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({});
   const { loading, error: errorMessage } = useSelector((state) => state.user);
+  const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -44,9 +47,16 @@ const SignIn = () => {
   };
 
   return (
-    <div className="min-h-screen mt-20">
+    <div className="min-h-screen mt-5 md:mt-20">
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
         <div className="flex-1">
+          <div className="mb-8">
+            <img
+              src={theme === "light" ? evLogoLight : evLogoDark}
+              alt="evLogo"
+              className="md:size-60  md:block  rounded-xl"
+            />
+          </div>
           <Link to="/" className="text-4xl font-bold dark:text-white">
             <span className="px-4 py-1 bg-gradient-to-r from-sky-500 to-emerald-500 rounded-xl text-white">
               EV

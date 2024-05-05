@@ -1,7 +1,7 @@
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import OAuth from "../components/OAuth";
+import { OAuth } from "../components";
 import { useSelector } from "react-redux";
 import evLogoDark from "../assets/evLogoDark.jpeg";
 import evLogoLight from "../assets/evLogoLight.jpeg";

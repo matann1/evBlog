@@ -7,7 +7,7 @@ import {
   signInSuccess,
   signInFailure,
 } from "../redux/user/userSlice";
-import OAuth from "../components/OAuth";
+import { OAuth } from "../components";
 import evLogoDark from "../assets/evLogoDark.jpeg";
 import evLogoLight from "../assets/evLogoLight.jpeg";
 
